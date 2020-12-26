@@ -11,7 +11,7 @@ Work in Progress
 -  **Browser:** Firefox
 -  **Music Player:** Spotify with [Spicetify-cli](https://github.com/khanhas/spicetify-cli)
 -  **Text Editor:** Vim
--  **GTK Theme:** Foggy Mountain (switch #282828 w/ #181818)
+-  **GTK Theme:** [Foggy Mountain](https://github.com/danielammartins/KDEdotfiles/tree/main/.themes/Foggy%20Mountain) (switch #282828 w/ #181818)
 -  **Icons:** Foggy Mountain
 -  **Cursor:** Adwaita/McMojave
 
