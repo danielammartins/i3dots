@@ -5,6 +5,7 @@ Work in Progress
 -  **Terminal:** Termite
 -  **Terminal Font:** Noto Sans Mono
 -  **System Font:** Noto Sans
+-  **Compositor:** Picom (Dana's fork)
 -  **Bar/Panel:** 
 -  **File Manager:** Thunar
 -  **Browser:** Firefox
