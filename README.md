@@ -6,7 +6,7 @@ Work in Progress
 -  **Terminal Font:** Noto Sans Mono
 -  **System Font:** Noto Sans
 -  **Compositor:** Picom (Dana's fork)
--  **Bar/Panel:** 
+-  **Bar/Panel:** Polybar
 -  **File Manager:** Thunar
 -  **Browser:** Firefox
 -  **Music Player:** Spotify with [Spicetify-cli](https://github.com/khanhas/spicetify-cli)
