@@ -1,4 +1,4 @@
-Work in Progress
+### Work in Progress
 
 -  **OS:** Manjaro
 -  **WM:** i3
@@ -6,7 +6,7 @@ Work in Progress
 -  **Terminal Font:** Noto Sans Mono
 -  **System Font:** Noto Sans
 -  **Compositor:** Picom (Dana's fork)
--  **Bar/Panel:** 
+-  **Bar/Panel:** Polybar
 -  **File Manager:** Thunar
 -  **Browser:** Firefox
 -  **Music Player:** Spotify with [Spicetify-cli](https://github.com/khanhas/spicetify-cli)
@@ -14,6 +14,8 @@ Work in Progress
 -  **GTK Theme:** [Foggy Mountain](https://github.com/danielammartins/KDEdotfiles/tree/main/.themes/Foggy%20Mountain) (switch #282828 w/ #181818)
 -  **Icons:** Foggy Mountain
 -  **Cursor:** Adwaita/McMojave
+-  **Mixer:** rsmixer
+-  **Screenshot:** gscreenshot 
 
 ## :pushpin: Apps to install
 
