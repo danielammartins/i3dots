@@ -1,0 +1,57 @@
+/*Change scrollbar width*/
+:root{
+	scrollbar-width: 3px !important;
+}
+
+@-moz-document url(about:privatebrowsing) {
+	:root{
+		scrollbar-width: 3px !important;
+	}
+}
+
+/*Home page and new tab*/
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+  
+    body {
+        background-color: #181818 !important;
+    }
+
+    #newtab-search-text {
+      background-color: #181818 !important;
+      color: white !important;
+      border: none;
+  }
+
+  .contentSearchSuggestionTable {
+    display: none;
+    }
+    
+    .icon-settings {
+        background-color: var(--mff-bg) !important;
+    }
+    
+    #searchSubmit {
+       display: none;  
+    }
+    
+    #newtab-search-text {
+        border:none;
+    }
+    
+    .search.wrapper {
+        border: none;
+    }
+    
+    .search-inner-wrapper {
+        border:none;
+        color: #242424;
+    }
+
+}
+
+/*Removes blue box shadow from search bar*/
+.search-wrapper input {
+	border-color: #242424 !important;
+	box-shadow: none !important;
+}
+
