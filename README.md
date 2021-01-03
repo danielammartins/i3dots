@@ -1,4 +1,4 @@
-<center>[spotify](prints/spotify.png)</center>
+<center>[spotify](https://github.com/danielammartins/i3dots/blob/main/prints/spotify.png)</center>
 
 ### Work in Progress
 
