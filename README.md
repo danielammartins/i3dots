@@ -1,6 +1,10 @@
-<center>![spotify](https://github.com/danielammartins/i3dots/blob/main/prints/spotify.png)</center>
+![fetch](https://github.com/danielammartins/i3dots/blob/main/prints/fetch.png)
 
-### Work in Progress
+Prints at the end of file 
+
+Work in Progress
+
+### Info
 
 -  **OS:** Manjaro
 -  **WM:** i3
@@ -43,3 +47,6 @@
 -  Slack
 -  [Spotify](https://aur.archlinux.org/packages/spotify/)
 
+![spotify](https://github.com/danielammartins/i3dots/blob/main/prints/spotify.png)
+![editors](https://github.com/danielammartins/i3dots/blob/main/prints/editors.png)
+![firefox](https://github.com/danielammartins/i3dots/blob/main/prints/firefox.png)
