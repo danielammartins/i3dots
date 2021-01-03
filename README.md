@@ -11,11 +11,13 @@
 -  **Browser:** Firefox
 -  **Music Player:** Spotify with [Spicetify-cli](https://github.com/khanhas/spicetify-cli)
 -  **Text Editor:** Vim
--  **GTK Theme:** [Foggy Mountain](https://github.com/danielammartins/KDEdotfiles/tree/main/.themes/Foggy%20Mountain) (switch #282828 w/ #181818)
+-  **GTK Theme:** [Coffee](https://github.com/danielammartins/KDEdotfiles/tree/main/.themes/Coffee) 
 -  **Icons:** Foggy Mountain
--  **Cursor:** Adwaita/McMojave
--  **Mixer:** rsmixer
+-  **Cursor:** Adwaita
+-  **Mixer:** rsmixer, alsamixer
 -  **Screenshot:** gscreenshot 
+-  **Application Launcher:** rofi
+-  **Calculator:** rofi-calc
 
 ## :pushpin: Apps to install
 
@@ -33,14 +35,9 @@
 -  Firefox Developer Edition
 -  Chromium
 -  Microsoft Teams
--  Zoom 
 
 **Misc**
 -  Discord
 -  Slack
 -  [Spotify](https://aur.archlinux.org/packages/spotify/)
--  gnome-keyring
--  qBitTorrent
--  VLC
--  Nautilus
--  Kate
+
