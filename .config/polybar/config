@@ -38,14 +38,15 @@ padding-right = 4
 module-margin-left = 0
 module-margin-right = 6
 
-modules-left = i3
+modules-left = i3 
 modules-center = spotify
-modules-right = volume backlight wireless-network wired-network battery clock
+modules-right = volume-external backlight battery clock
 
 font-0 = NotoSans-Regular:size=10;-1
 font-1 = MaterialIcons:size=10;0
 font-2 = Termsynu:size=8:antialias=false;-2
 font-3 = FontAwesome:size=10;0
+
 
 [module/backlight]
 type = internal/backlight
@@ -58,9 +59,14 @@ ramp-2 = 🌓
 ramp-3 = 🌒
 ramp-4 = 🌑
 
+enable-scroll = true
+
 [module/battery]
 type = internal/battery
-full-at = 98
+full-at = 99
+
+label-full = Fully charged
+label-charging = Charging %percentage%%
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
@@ -183,6 +189,49 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = #d8d8d8
+
+click-right = pavucontrol
+
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+
+
+[module/volume-external]
+type = internal/pulseaudio
+
+label-volume = 🔊 VOL %percentage%%
+label-volume-foreground = #d8d8d8
+
+
+label-muted = 🔇 muted
+label-muted-foreground = #666
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = #d8d8d8
+
+click-right = pavucontrol
+
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+
 
 [module/powermenu]
 type = custom/menu
