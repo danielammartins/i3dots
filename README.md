@@ -1,4 +1,4 @@
-[spotify](walls/spotify.png)
+<center>[spotify](prints/spotify.png)</center>
 
 ### Work in Progress
 
