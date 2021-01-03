@@ -19,12 +19,13 @@ font-2 = Termsynu:size=8:antialias=false;-2
 font-3 = FontAwesome:size=10;0
 
 modules-left = i3
+modules-center = spotify
 modules-right = volume backlight wireless-network wired-network battery clock
 
 [bar/external]
 monitor = DP-1
 width = 100%
-height = 27
+height = 34
 
 background = ${bar/internal.background}
 foreground = ${bar/internal.foreground}
@@ -38,10 +39,13 @@ module-margin-left = 0
 module-margin-right = 6
 
 modules-left = i3
+modules-center = spotify
 modules-right = volume backlight wireless-network wired-network battery clock
-volume backlight wireless-network wired-network battery clock
 
 font-0 = NotoSans-Regular:size=10;-1
+font-1 = MaterialIcons:size=10;0
+font-2 = Termsynu:size=8:antialias=false;-2
+font-3 = FontAwesome:size=10;0
 
 [module/backlight]
 type = internal/backlight
@@ -129,7 +133,8 @@ ping-interval = 10
 
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
-label-disconnected = 
+label-disconnected = %{A1:nm-connection-editor:}No Wi-fi%{A}
+
 label-disconnected-foreground = #66
 
 ramp-signal-0 = 
@@ -149,7 +154,7 @@ type = internal/network
 interface = enp0s20f0u1
 interval = 3.0
 
-label-connected =    %{T1}%local_ip%%{T-}
+label-connected = %{T1}%local_ip%%{T-}
 label-disconnected-foreground = #66
 
 [module/volume]
@@ -216,5 +221,13 @@ type = internal/date
 interval = 1
 date = %a %d %b      %H:%M
 date-alt = %A, %d %B %Y  %H:%M:%%{F#685054}%S
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python /home/dani/.config/polybar/modules/spotify_status.py -f '{artist} - {song}'
+format-underline = 
 
 
