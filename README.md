@@ -48,5 +48,5 @@ Work in Progress
 -  [Spotify](https://aur.archlinux.org/packages/spotify/)
 
 ![spotify](https://github.com/danielammartins/i3dots/blob/main/prints/spotify.png)
-![editors](https://github.com/danielammartins/i3dots/blob/main/prints/editors.png)
+![tiled](https://github.com/danielammartins/i3dots/blob/main/prints/tiled.png)
 ![firefox](https://github.com/danielammartins/i3dots/blob/main/prints/firefox.png)
