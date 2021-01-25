@@ -1,4 +1,4 @@
-![neofetch](https://github.com/danielammartins/i3dots/blob/main/prints/fetch.png)
+![neofetch](https://github.com/danielammartins/i3dots/blob/main/prints/neofetch.png)
 
 Prints at the end of file 
 
