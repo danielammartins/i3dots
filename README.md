@@ -11,7 +11,7 @@ Work in Progress
 -  **Terminal:** Termite
 -  **Terminal Font:** Noto Sans Mono
 -  **System Font:** Noto Sans
--  **Compositor:** Picom (Dana's fork)
+-  **Compositor:** [Picom](https://github.com/yshui/picom)
 -  **Bar/Panel:** Polybar
 -  **File Manager:** Thunar
 -  **Browser:** Firefox
@@ -21,7 +21,7 @@ Work in Progress
 -  **Icons:** Foggy Mountain
 -  **Cursor:** Adwaita
 -  **Mixer:** rsmixer, alsamixer
--  **Screenshot:** gscreenshot 
+-  **Screenshot:** Flameshot 
 -  **Application Launcher:** rofi
 -  **Calculator:** rofi-calc
 
