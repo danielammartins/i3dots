@@ -27,6 +27,9 @@
    --mff-urlbar-results-url-color: var(--color15);
 
   /* Overriden Firefox variables*/
+  --tab-corner-rounding: 7px;
+  --button-corner-rounding: 10px;
+  --animation-speed: 0.4s;
   --autocomplete-popup-background: var(--mff-bg) !important;
   --default-arrowpanel-background: var(--mff-bg) !important;
   --default-arrowpanel-color: #fefefa !important;
@@ -34,6 +37,7 @@
   --panel-disabled-color: #f9f9fa80;
   --toolbar-bgcolor: var(--mff-bg) !important;
   --urlbar-separator-color: transparent !important;
+  --newtab-textbox-focus-color: #9E7F6D !important;
 }
 
 /*
@@ -156,6 +160,14 @@ background: var(--mff-bg) !important;
   display: block;
 }
 
+/* Stretch the tab bar to the whole screen width*/
+.tabbrowser-tab[fadein]:not([pinned]) {
+  max-width: unset !important;
+}
+
+.tab-label {-moz-box-flex: 1 !important; text-align: center !important;}
+
+
 /*Changs tab text font*/
 .tab-text {
   font-family: var(--mff-tab-font-family);
@@ -251,7 +263,7 @@ TOOLBAR
     display:none;    
 }
 
-/*Changes color, idkw*/
+/*Changes color*/
 toolbar {
   background-image: none !important;
 }
@@ -291,8 +303,4 @@ image#star-button {
   visibility: hidden;
 }
 
-#minimize-button, #restore-button, #close-button {
-   display: none;
-   visibility: hidden;
-}
-
+#window-controls{display: none !important; }
