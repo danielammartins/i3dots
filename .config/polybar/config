@@ -1,65 +1,97 @@
+;################
+;   Colors
+;################
+
+[colors]
+background = #00000000
+foreground = #ccffffff
+foreground-alt = #66
+
+;##################
+;   Laptop Bar
+;##################
+
 [bar/internal]
 monitor = eDP-1
 width = 100%
 height = 34
 
-background = #00000000
-foreground = #ccffffff
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 line-color = ${bar/external.background}
 line-size = 16
 
-spacing = 2
-padding-right = 5
-module-margin = 4
+spacing = 0
+padding-right = 2
+padding-left = 1
+module-margin-left = 0
+module-margin-right = 3
 
-font-0 = NotoSans-Regular:size=10;-1
+font-0 = Noto Sans Mono:size=10;-1
 font-1 = MaterialIcons:size=10;0
 font-2 = Termsynu:size=8:antialias=false;-2
 font-3 = FontAwesome:size=10;0
 
+tray-position = right
+tray-detached = false
+tray-maxsize = 20
+tray-background = ${colors.background}
+tray-offset-x = -5
+tray-offset-y = 2
+tray-padding = 0
+tray-scale =  0.7
+
 modules-left = i3
 modules-center = spotify
 modules-right = volume backlight wireless-network wired-network battery clock
+
+;##################
+;   Monitor Bar
+;##################
 
 [bar/external]
 monitor = DP-1
 width = 100%
 height = 34
 
-background = ${bar/internal.background}
-foreground = ${bar/internal.foreground}
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 line-color = ${bar/internal.background}
 line-size = 2
 
-spacing = 3
-padding-right = 4
+spacing = 0
+padding-right = 2
+padding-left = 1
 module-margin-left = 0
-module-margin-right = 6
+module-margin-right = 3
 
 modules-left = i3 
 modules-center = spotify
-modules-right = volume-external backlight battery clock
+modules-right = volume wired-network battery clock
 
-font-0 = NotoSans-Regular:size=10;-1
+font-0 = Noto Sans Mono:size=10;-1
 font-1 = MaterialIcons:size=10;0
 font-2 = Termsynu:size=8:antialias=false;-2
 font-3 = FontAwesome:size=10;0
 
+;################
+;   Backlight
+;################
 
 [module/backlight]
 type = internal/backlight
 card = intel_backlight
-format = <ramp> <label>
-
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
-
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+label = %percentage:2 %%
 enable-scroll = true
+
+
+;################
+;   Battery
+;################
 
 [module/battery]
 type = internal/battery
@@ -96,6 +128,10 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 750
 
+;##################
+;       i3
+;##################
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -105,7 +141,7 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 0
 label-mode-foreground = #ffffff
 label-mode-background = transparent
 
@@ -113,11 +149,11 @@ label-mode-background = transparent
 label-focused = %name%
 label-focused-background = transparent
 label-focused-underline= transparent
-label-focused-padding = 2
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 label-unfocused-foreground = #636262
 
 ; visible = Active workspace on unfocused monitor
@@ -128,10 +164,14 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
-label-urgent-background =  red
-label-urgent-foreground =  red
+label-urgent-background =  transparent
+label-urgent-foreground =  #ff0000
 
-label-urgent-padding = 2
+label-urgent-padding = 1
+
+;##################
+;    Wireless 
+;##################
 
 [module/wireless-network]
 type = internal/network
@@ -139,23 +179,16 @@ interface = wlo1
 interval = 3.0
 ping-interval = 10
 
-format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
-label-disconnected = %{A1:nm-connection-editor:}No Wi-fi%{A}
+format-connected-prefix = %{A1:$HOME/.config/nmcli-rofi/nmcli-rofi:}  %{A}
+format-connected-prefix-foreground = ${colors.foreground}
+format-connected =  %{A1:$HOME/.config/nmcli-rofi/nmcli-rofi:}Connected %{A}
 
-label-disconnected-foreground = #66
+format-disconnected =  %{A1:$HOME/.config/nmcli-rofi/nmcli-rofi:} No Wifi %{A}
+format-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-
-animation-packetloss-0 = 
-animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 = 
-animation-packetloss-1-foreground = ${bar/internal.foreground}
-animation-packetloss-framerate = 500
+;##################
+;     Ethernet
+;##################
 
 [module/wired-network]
 type = internal/network
@@ -165,113 +198,41 @@ interval = 3.0
 label-connected = %{T1}%local_ip%%{T-}
 label-disconnected-foreground = #66
 
+;##################
+;     Volume
+;##################
+
 [module/volume]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
-label-volume-foreground = #d8d8d8
+format-volume-prefix  = "  "
+format-volume-prefix-foreground = ${colors.foreground}
+label-volume = %percentage%%
 
-label-muted = 🔇 muted
-label-muted-foreground = #666
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = #d8d8d8
+format-muted-prefix  = "  "
+format-muted-prefix-foreground = #fff
+label-muted = muted
+label-muted-foreground = ${colors.foreground-alt}
 
 click-right = pavucontrol
-
 
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ; Default: true
 use-ui-max = false
 
-
-[module/volume-external]
-type = internal/pulseaudio
-
-label-volume = 🔊 VOL %percentage%%
-label-volume-foreground = #d8d8d8
-
-
-label-muted = 🔇 muted
-label-muted-foreground = #666
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = #d8d8d8
-
-click-right = pavucontrol
-
-
-; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
-; Default: true
-use-ui-max = false
-
-
-[module/powermenu]
-type = custom/menu
-
-format-padding = 5
-
-label-open = 
-label-close = 
-
-menu-0-0 = Terminate WM
-menu-0-0-foreground = #fba922
-menu-0-0-exec = bspc quit -1
-menu-0-1 = Reboot
-menu-0-1-foreground = #fba922
-menu-0-1-exec = menu_open-1
-menu-0-2 = Power off
-menu-0-2-foreground = #fba922
-menu-0-2-exec = menu_open-2
-
-menu-1-0 = Cancel
-menu-1-0-foreground = #fba922
-menu-1-0-exec = menu_open-0
-menu-1-1 = Reboot
-menu-1-1-foreground = #fba922
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = Power off
-menu-2-0-foreground = #fba922
-menu-2-0-exec = sudo poweroff
-menu-2-1 = Cancel
-menu-2-1-foreground = #fba922
-menu-2-1-exec = menu_open-0
+;##################
+;      Clock
+;##################
 
 [module/clock]
 type = internal/date
 interval = 1
-date = %a %d %b      %H:%M
+date = %a %d  %b %H:%M
 date-alt = %A, %d %B %Y  %H:%M:%%{F#685054}%S
+
+;##################
+;     Spotify
+;##################
 
 [module/spotify]
 type = custom/script
