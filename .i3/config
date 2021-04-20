@@ -1,3 +1,5 @@
+# this work (c)2020 Daniela Martins, licensed GPLv3—see https://www.gnu.org/licenses/gpl-3.0.en.html 
+
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 set $mod1 Mod1
