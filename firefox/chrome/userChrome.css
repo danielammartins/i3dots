@@ -1,306 +1,333 @@
-:root {
+/* 
 
-    /*Color variables*/
-   --mff-bg: #181818;
-   --mff-icon-color: #fff;
-   --mff-nav-toolbar-padding: 8px;
-   --mff-sidebar-bg: var(--mff-bg);
-   --mff-sidebar-color: var(--foreground);
-   --mff-tab-border-radius: 0px;
-   --mff-tab-color: var(--foreground);
-   --mff-tab-font-family: "Noto Sans", sans;
-   --mff-tab-font-size: 11pt;
-   --mff-tab-font-weight: 400;
-   --mff-tab-height: 25px;
-   --mff-tab-pinned-bg: var(--color1);
-   --mff-tab-selected-bg: var(--color8);
-   --mff-tab-soundplaying-bg: var(--color9);
-   --mff-urlbar-color: var(--color7);
-   --mff-urlbar-focused-color: var(--color7);
-   --mff-urlbar-font-family: "Noto Sans", sans;
-   --mff-urlbar-font-size: 11pt;
-   --mff-urlbar-font-weight: 400;
-   --mff-urlbar-results-color: #fff;
-   --mff-urlbar-results-font-family: "Noto Sans", sans;
-   --mff-urlbar-results-font-size: 11pt;
-   --mff-urlbar-results-font-weight: 400;
-   --mff-urlbar-results-url-color: var(--color15);
+V A R I A B L E S 
 
-  /* Overriden Firefox variables*/
-  --tab-corner-rounding: 7px;
-  --button-corner-rounding: 10px;
-  --animation-speed: 0.4s;
-  --autocomplete-popup-background: var(--mff-bg) !important;
-  --default-arrowpanel-background: var(--mff-bg) !important;
-  --default-arrowpanel-color: #fefefa !important;
-  --lwt-toolbarbutton-icon-fill: var(--mff-icon-color) !important;
-  --panel-disabled-color: #f9f9fa80;
-  --toolbar-bgcolor: var(--mff-bg) !important;
-  --urlbar-separator-color: transparent !important;
-  --newtab-textbox-focus-color: #9E7F6D !important;
-}
+Here you can change the opacity level and the main color of the browser. Also the color of the selections (When you select text)
 
-/*
-TABS
 */
 
-/* REMOVE MEGABAR START
- * VERSION 1.0.4
- * CODE AT: http://userchrome.wesleybranton.com/megabar
- * RELEASE NOTES: http://userchrome.wesleybranton.com/notes/megabar */
- @-moz-document url(chrome://browser/content/browser.xhtml) {
-  /* DISABLE EXPANDING START */
-  #urlbar[breakout][breakout-extend] {
-      top: 2px !important;
-      left: 0 !important;
-      width: 100% !important;
-  }
-  
-  #urlbar[breakout][breakout-extend] > #urlbar-input-container {
-      top: 2px !important;
-      height: var(--urlbar-height) !important;
-      padding-block: 0 !important;
-      padding-inline: 0 !important;
-  }
-  
-  #urlbar[breakout][breakout-extend] > #urlbar-background {
-      animation-name: none !important;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, .05) !important;
-  }
-  /* DISABLE EXPANDING END */
-  
-  /* REMOVE URL RESULT PADDING START */
-  .urlbarView {
-      margin-inline: 0 !important;
-      width: 100% !important;
-  }
-
-  .urlbarView-row {
-      padding-block: 0 !important;
-  }
-  /* REMOVE URL RESULT PADDING END */
-  
-  /* MOVE URL RESULT TYPE ICON TO LEFT START */
-  .urlbarView-type-icon {
-      min-width: 16px !important;
-      height: 16px !important;
-      margin-bottom: 0 !important;
-      margin-inline-start: 0 !important;
-  }
-  
-  .urlbarView-favicon {
-      margin-inline-start: 0px !important;
-  }
-  /* MOVE URL RESULT TYPE ICON TO LEFT END */
-
-  /* DISPLAY GO BUTTON WHEN TYPING START */
-  #urlbar-input-container[pageproxystate="invalid"] #urlbar-go-button {
-      display: block !important;
-  }
-  /* DISPLAY GO BUTTON WHEN TYPING END */
-
-  /* ALWAYS SHOW PAGE ACTIONS START */
-  /* DISABLED BY DEFAULT - UNCOMMENT TO ENABLE */
-  /*#pageActionButton {
-      display: block !important;
-  }*/
-  /* ALWAYS SHOW PAGE ACTIONS END */
-}
-/* REMOVE MEGABAR END */
-
-/* Replace favicon on tabs with close button on hover */
- 
-.tabbrowser-tab:not(:hover) .tab-close-button{ 
-    display:none;    
-}
-.tabbrowser-tab:not([pinned]):hover .tab-close-button{ 
-    display:block !important;
-} 
- 
-.tabbrowser-tab:not([pinned]):hover  .tab-icon-image {
-  display: none !important;
-}
- 
-.tabbrowser-tab:hover  .tab-throbber,
-.tabbrowser-tab:hover  .tab-icon-image,
-.tabbrowser-tab:hover .tab-sharing-icon-overlay,
-.tabbrowser-tab:hover  .tab-icon-overlay,
-.tabbrowser-tab:hover  .tab-label-container,
-.tabbrowser-tab:hover  .tab-icon-sound {
-  -moz-box-ordinal-group: 2 !important;
-}
- 
-.tabbrowser-tab .tab-close-button {
-  margin-left: -2px !important;
-  margin-right: 4px !important;  
+:root {
+    --srf-color-primary: #181818;
+    --srf-color-selection: #9D7E6C;
+    --srf-color-text: #d8d8d8;
 }
 
-/**/
+/* 
+G E N E R A L 
+*/
 
-/*Changes tab color*/
-.tab-background[selected="true"] {
-background: var(--mff-bg) !important;
+window,
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#navigator-toolbox,
+#sidebar-box,
+#nav-bar {
+    background-color: var(--srf-color-primary) !important;
+    -moz-appearance: none !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-.tabbrowser-tab::after,
-.tabbrowser-tab::before {
-  border-left: none !important;
+::selection {
+    background-color: var(--srf-color-selection);
+    /* Text color of your selection */
+    color: #d8d8d8;
+}
+
+/* 
+
+T A B S 
+
+*/
+
+:root {
+    --tabs-border: transparent !important;
+    --toolbox-border-bottom-color: transparent !important;
+}
+
+#navigator-toolbox {
+    border: 0px !important;
+}
+
+#TabsToolbar {
+    margin-top: 0px !important;
+    margin-bottom: 1px !important;
+    margin-left: 25vw !important;
+    max-height: 32px !important;
 }
 
 .tab-background {
-  border: none !important;
-  background: #181818 !important;
+    border: none !important;
 }
 
-.tab-line {
-  display: none;
+.tab-background[selected='true'] {
+    -moz-appearance: none !important;
+    background-image: none !important;
 }
 
-.tabbrowser-tab[selected="true"] .tab-line {
-  display: block;
+.tabbrowser-tabs {
+    border: none !important;
+    opacity: 0 !important;
 }
 
-/* Stretch the tab bar to the whole screen width*/
-.tabbrowser-tab[fadein]:not([pinned]) {
-  max-width: unset !important;
+.tabbrowser-tab::before {
+    opacity: 0 !important;
+    border-left: none !important;
 }
 
-.tab-label {-moz-box-flex: 1 !important; text-align: center !important;}
-
-
-/*Changs tab text font*/
-.tab-text {
-  font-family: var(--mff-tab-font-family);
-  font-weight: var(--mff-tab-font-weight);
-  font-size: var(--mff-tab-font-size) !important;
-  color: var(--mff-tab-color);
+.tabbrowser-tab::after {
+    opacity: 0 !important;
+    border-left: none !important;
 }
 
+.titlebar-placeholder {
+    border: none !important;
+}
 
-/* This positions the tabs under the navigator container */
-#titlebar {
-  -moz-box-ordinal-group: 3 !important;
+.tabbrowser-arrowscrollbox {
+    height: 32px !important;
+    min-height: 32px !important;
+}
+
+.titlebar-placeholder[type='pre-tabs'] {
+    display: none !important;
+}
+
+tab.tabbrowser-tab:hover {
+    background-color: black !important;
+  }
+  
+tab.tabbrowser-tab:hover .tab.line {
+      display:none;
+  }
+  
+/* 
+
+B U T T O N S 
+
+*/
+
+/*
+#back-button {
+    list-style-image: url("left-arrow.svg") !important;
+}
+  
+#forward-button {
+    list-style-image: url("right-arrow.svg") !important;
+}*/
+
+#back-button {
+	display: none;
+}
+
+#forward-button {
+	display:none;
+}
+
+#reload-button {
+    display: none;
 }
 
 /* Removes new tab button*/
 #tabs-newtab-button {
-  display: none;
+    display: none;
 }
 
-#tabbrowser-tabs {
-  --tab-loading-fill: #af9687 !important;
+/* This one is the spacer between tabs and border  */
+.titlebar-spacer {
+    display: none !important;
 }
 
-.tabbrowser-tab {
-  border-radius: var(--mff-tab-border-radius) !important;
-  border-width: 0;
-  height: var(--mff-tab-height) !important;
-  margin-bottom: 4px !important;
-  margin-inline-end: 4px !important;
-  margin-top: 4px !important;
-  max-height: var(--mff-tab-height) !important;
-  min-height: var(--mff-tab-height) !important;
+/* This one is the "shield" icon  */
+#tracking-protection-icon-container {
+    display: none !important;
 }
 
-.tabbrowser-tab[soundplaying="true"] {
-  background-color: var(--mff-tab-soundplaying-bg) !important;
+/* This one is the hamburger menu!  */
+#PanelUI-button {
+    display: none !important;
 }
 
-.tab-icon-sound {
-  display: none !important;
+/* This one removes the close button  */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+    display: none !important;
+}
+
+/*
+/* This one clears the tabs icon when they're not pinned  
+.tabbrowser-tab:not([pinned]) .tab-icon-image {
+    display: none !important;
+} */
+
+/* Removing the zoom button  */
+#urlbar-zoom-button {
+    display: none !important;
+}
+
+
+/* 
+N A V B A R
+*/
+
+#navigator-toolbox::after {
+    border: 0px !important;
+}
+
+#nav-bar {
+    border: none !important;
+    box-shadow: none !important;
+    border-top-width: 0px !important;
+    border-bottom-width: 0px !important;
+    margin-top: -32px !important;
+    margin-bottom: -1px !important;
+    margin-right: 75vw !important;
+    height: 32px !important;
 }
 
 /* 
-TOOLBAR
+
+S I D E - B A R
+
 */
 
-
-.urlbar-icon > image {
-  fill: var(--mff-icon-color) !important;
-  color: var(--mff-icon-color) !important;
+#history-panel,
+#sidebar-search-container,
+#bookmarksPanel {
+    background: var(--srf-color-primary) !important;
 }
 
-.urlbarView-row[type="bookmark"] > span{
-  color: #929284 !important;
+#search-box {
+    -moz-appearance: none !important;
+    background: var(--srf-color-primary) !important;
+    border-radius: 6px !important;
 }
 
-.urlbarView-row[type="switchtab"] > span{
-  color: #9d7e6c !important;
+#sidebar-icon {
+    display: none !important;
 }
 
-.urlbarView-url, .search-panel-one-offs-container {
-  color: var(--mff-urlbar-results-url-color) !important;
-  font-family: var(--mff-urlbar-font-family);
-  font-weight: var(--mff-urlbar-results-font-weight);
-  font-size: var(--mff-urlbar-font-size) !important;
+.sidebar-placesTree {
+    color: #d8d8d8 !important;
 }
 
-/*Removes Fav icons from urlbar search results*/
-.urlbarView-type-icon {
-  display: none !important;
+#sidebar-switcher-target {
+    color: var(--srf-color-selection) !important;
 }
 
-/*Center Search with DuckDuckGo*/
-#urlbar-input {
-  font-size: var(--mff-urlbar-font-size) !important;
-  color: var(--mff-urlbar-color) !important;
-  font-family: var(--mff-urlbar-font-family) !important;
-  font-weight: var(--mff-urlbar-font-weight)!important;
-  text-align: center !important;
+#sidebar-header {
+    background: var(--srf-color-primary) !important;
 }
 
-/*Changes back, foward buttons and removes reload*/
-
-#back-button {
-  list-style-image: url("left-arrow.svg") !important;
+#sidebar-switcher-arrow {
+    display: none;
 }
 
-#forward-button {
-  list-style-image: url("right-arrow.svg") !important;
+#sidebar-splitter {
+    border: none !important;
+    opacity: 1 !important; 
+    background-color: var(--srf-color-primary) !important;
 }
 
-#reload-button {
-    display:none;    
+splitter#sidebar-splitter {
+    border: none !important;
 }
 
-/*Changes color*/
-toolbar {
-  background-image: none !important;
+/* 
+U R L - B A R
+*/
+
+#urlbar[breakout] {
+    margin-inline-start: 0px !important;
+    width: 100% !important;
+    left: 0 !important;
+    top: calc(
+        (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+    ) !important;
 }
 
-#navigator-toolbox, toolbaritem {
-  border: none !important;
+@-moz-document url(chrome://browser/content/browser.xhtml)
+{
+    #urlbar[breakout][breakout-extend] > #urlbar-background {
+        animation-name: none !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
+    }
 }
+
+#urlbar[breakout]:not([open]) {
+    bottom: calc(
+        (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+    ) !important;
+}
+
+#urlbar[breakout-extend] {
+    top: calc(
+        (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+    ) !important;
+    left: calc(
+        (var(--urlbar-toolbar-width) - var(--urlbar-width)) / 2
+    ) !important;
+    width: 100% !important;
+}
+
+#urlbar[breakout-extend] #urlbar-input-container {
+    height: calc(var(--tab-min-height) - 3px) !important;
+    padding: 0px !important;
+}
+
+#urlbar-input-container {
+    padding: 0 !important;
+    height: 100% !important;
+}
+
+#identity-box {
+    display: none;
+}
+
+.urlbarView-row {
+    padding: 0px !important;
+}
+
+#searchbar {
+    background: var(--bf-bg) !important;
+    border: none !important;
+}
+
+.searchbar-textbox {
+    color: var(--bf-focus-fg) !important;
+    font-weight: 700 !important;
+}
+
+#urlbar-container {
+    min-width: 150px !important;
+}
+
+#urlbar {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.urlbarView {
+    margin: 0px !important;
+    width: 100% !important;
+}
+
+#urlbar-label-box, #urlbar-search-mode-indicator {
+    display: none !important;
+}
+
+/* 
+If you want to show the URLBar extended you must
+change this two blocks:
+
+In order to show it, you must change the value of "transparent" in the first block 
+and erease the second block. 
+*/
 
 #urlbar-background {
-  background-color: #181818 !important;
-  border: none !important;
+    background: #181818 !important;
+    border: transparent !important;
+    animation: none !important;
 }
-
-.toolbar-items {
-  background-color: var(--mff-bg) !important;
-  font-family: var(--mff-tab-font-family);
-}
-
-tab.tabbrowser-tab {
-  overflow: hidden;
-}
-
-tab.tabbrowser-tab:hover {
-  background-color: var(--mff-bg) !important;
-}
-
-tab.tabbrowser-tab:hover .tab.line {
-    display:none;
-}
-
-image#star-button {
-  display: none;
-}
-
-/*Hides URL bar go button*/
-#urlbar-go-button {
-  visibility: hidden;
-}
-
-#window-controls{display: none !important; }
