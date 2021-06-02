@@ -1,5 +1,3 @@
-![neofetch](https://github.com/danielammartins/i3dots/blob/main/prints/neofetch.png)
-
 Prints at the end of file 
 
 Work in Progress
@@ -46,7 +44,3 @@ Work in Progress
 -  Discord
 -  Slack
 -  [Spotify](https://aur.archlinux.org/packages/spotify/)
-
-![spotify](https://github.com/danielammartins/i3dots/blob/main/prints/spotify.png)
-![tiled](https://github.com/danielammartins/i3dots/blob/main/prints/tiled.png)
-![firefox](https://github.com/danielammartins/i3dots/blob/main/prints/firefox.png)
