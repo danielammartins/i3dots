@@ -1,5 +1,3 @@
-![neofetch](https://github.com/danielammartins/i3dots/blob/main/prints/neofetch.png)
-
 Prints at the end of file 
 
 Work in Progress
@@ -25,28 +23,3 @@ Work in Progress
 -  **Application Launcher:** rofi
 -  **Calculator:** rofi-calc
 
-## :pushpin: Apps to install
-
-**Dev**
--  [VS Code](https://aur.archlinux.org/packages/visual-studio-code-bin/)
--  Vim
--  IntelliJ
--  PyCharm
--  [Eclipse C++](https://www.eclipse.org/downloads/packages/release/kepler/sr2/eclipse-ide-cc-developers) 09.2019 (version with arduino plugin)
--  [Figma](https://aur.archlinux.org/packages/figma-linux/)
--  Filezilla
-
-**Internet**
--  Firefox
--  Firefox Developer Edition
--  Chromium
--  Microsoft Teams
-
-**Misc**
--  Discord
--  Slack
--  [Spotify](https://aur.archlinux.org/packages/spotify/)
-
-![spotify](https://github.com/danielammartins/i3dots/blob/main/prints/spotify.png)
-![tiled](https://github.com/danielammartins/i3dots/blob/main/prints/tiled.png)
-![firefox](https://github.com/danielammartins/i3dots/blob/main/prints/firefox.png)
