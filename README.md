@@ -1,6 +1,4 @@
-Prints at the end of file 
-
-Work in Progress
+eternally in irogress
 
 ### Info
 
@@ -22,4 +20,3 @@ Work in Progress
 -  **Screenshot:** Flameshot 
 -  **Application Launcher:** rofi
 -  **Calculator:** rofi-calc
-
