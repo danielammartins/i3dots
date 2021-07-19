@@ -16,5 +16,4 @@
 -  **Application Launcher:** rofi
 
 ## Install
-========================
 
