@@ -15,4 +15,4 @@
 -  **Cursor:** Adwaita
 -  **Application Launcher:** rofi
 
-##Install
+## Install
