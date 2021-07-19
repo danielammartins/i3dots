@@ -59,6 +59,10 @@ paru -S $(cat aur_packages.txt)
 cd ~/Documents/i3dots/.i3/
 /bin/cp config ~/.i3/config
 ```
+* Configure polybar
+```
+cp -r /polybar ~/.config
+```
 * Overwrite the bashrc file in Documents with the bashrc from the dotfiles
 ```
 cd ~/Documents/i3dots
@@ -68,13 +72,13 @@ cd ~/Documents/i3dots
 ```
 cd ~/Documents/i3dots/.themes
 cp -r Coffee/ /usr/share/themes/
-cd ~/Documents/i3dots/.icons
-
 
 ```
-** Open lxappearance and change the GTK theme to Coffee
-** Change the mouse coursor to Adwaita
-** 
+** Open lxappearance
+*** Change the GTK theme to Coffee
+*** Change the mouse coursor to Adwaita
+*** Install the Foggy Mountain.tar.gz icon set located in ~/Documents/i3dots/icons
+
 * Set wallpaper
 ```
 cd ~/Documents/i3dots/walls
@@ -85,5 +89,17 @@ feh --bg-scale /usr/share/backgrounds/forest_road_winding_151202_3840x2160.jpg
 ```
 export BROWSER=""			
 xdg-settings set default-web-browser firefox.desktop
+```
+* Copy the .config files 
+```
+cp -r dunst/ rofi/ /spicetify /termite ~/.config
+```
+* Configure Spicetify
+```
+sudo chmod a+wr /opt/spotify
+sudo chmod a+wr /opt/spotify/Apps -R
+spicetify
+spicetify backup apply enable-devtool
+spicetify update
 ```
 
