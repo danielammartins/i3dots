@@ -64,9 +64,20 @@ cd ~/Documents/i3dots/.i3/
 cd ~/Documents/i3dots
 /bin/cp .bashrc ~/
 ```
+* Set theme, mouse and icons
+```
+cd ~/Documents/i3dots/.themes
+cp -r Coffee/ /usr/share/themes/
+cd ~/Documents/i3dots/.icons
+
+
+```
+** Open lxappearance and change the GTK theme to Coffee
+** Change the mouse coursor to Adwaita
+** 
 * Set wallpaper
 ```
-cd /home/dani/Documents/i3dots/walls
+cd ~/Documents/i3dots/walls
 sudo cp forest_road_winding_151202_3840x2160.jpg /usr/share/backgrounds/ 
 feh --bg-scale /usr/share/backgrounds/forest_road_winding_151202_3840x2160.jpg
 ```
