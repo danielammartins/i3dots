@@ -68,16 +68,16 @@ cp -r /polybar ~/.config
 cd ~/Documents/i3dots
 /bin/cp .bashrc ~/
 ```
-* Set theme, mouse and icons
- * ```
+* Copy the theme folder to the installed themes folder
+ ```
  cd ~/Documents/i3dots/.themes
  cp -r Coffee/ /usr/share/themes/
 
  ```
-  * Open lxappearance
-    * Change the GTK theme to Coffee
-    * Change the mouse coursor to Adwaita
-    * Install the Foggy Mountain.tar.gz icon set located in ~/Documents/i3dots/icons
+ * Change theme, mouse and icons in lxappearance
+     * Change the GTK theme to Coffee
+     * Change the mouse coursor to Adwaita
+     * Install the Foggy Mountain.tar.gz icon set located in ~/Documents/i3dots/icons
 
 * Set wallpaper
 ```
