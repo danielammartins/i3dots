@@ -69,11 +69,11 @@ cd ~/Documents/i3dots
 /bin/cp .bashrc ~/
 ```
 * Set theme, mouse and icons
-```
-cd ~/Documents/i3dots/.themes
-cp -r Coffee/ /usr/share/themes/
+ *```
+ cd ~/Documents/i3dots/.themes
+ cp -r Coffee/ /usr/share/themes/
 
-```
+ ```
   * Open lxappearance
     * Change the GTK theme to Coffee
     * Change the mouse coursor to Adwaita
