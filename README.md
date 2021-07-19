@@ -14,3 +14,5 @@
 -  **Icons:** Foggy Mountain
 -  **Cursor:** Adwaita
 -  **Application Launcher:** rofi
+
+##Install
