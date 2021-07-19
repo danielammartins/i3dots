@@ -17,3 +17,5 @@
 
 ## Install
 
+* Set fastest mirrors
+``` sudo pacman-mirrors --fasttrack ```
