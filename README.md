@@ -54,3 +54,25 @@ pacman -S $(cat official_packages.txt)
 # AUR packages
 paru -S $(cat aur_packages.txt)
 ```
+* Override i3 config file
+```
+cd ~/Documents/i3dots/.i3/
+/bin/cp config ~/.i3/config
+```
+* Overwrite the bashrc file in Documents with the bashrc from the dotfiles
+```
+cd ~/Documents/i3dots
+/bin/cp .bashrc ~/
+```
+* Set wallpaper
+```
+cd /home/dani/Documents/i3dots/walls
+sudo cp forest_road_winding_151202_3840x2160.jpg /usr/share/backgrounds/ 
+feh --bg-scale /usr/share/backgrounds/forest_road_winding_151202_3840x2160.jpg
+```
+* Set firefox as default browser
+```
+export BROWSER=""			
+xdg-settings set default-web-browser firefox.desktop
+```
+
