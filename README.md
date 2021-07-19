@@ -69,7 +69,7 @@ cd ~/Documents/i3dots
 /bin/cp .bashrc ~/
 ```
 * Set theme, mouse and icons
-```
+** ```
 cd ~/Documents/i3dots/.themes
 cp -r Coffee/ /usr/share/themes/
 
