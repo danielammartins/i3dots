@@ -23,43 +23,6 @@
 
 ## Install
 
-* Set fastest mirrors
-``` 
-sudo pacman-mirrors --fasttrack 
-```
-* Enable SSD trimming
-```
-sudo systemctl enable fstrim.timer
-```
-* Check for errors
-```
-sudo systemctl --failed
-```
-* General system update
-```
-sudo pacman -Syu
-```
-* AUR Helper (currently using Paru)
-```
-sudo pacman -S --needed base-devel
-cd /opt
-sudo git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-```
-* Clone the dotfiles
-```
-cd ~/Documents
-git clone https://github.com/danielammartins/i3dots
-```
-* Install packages
-``` 
-cd ~/Documents/i3dots/packages
-# Packages from the Official Repositories
-pacman -S $(cat official_packages.txt)
-# AUR packages
-paru -S $(cat aur_packages.txt)
-```
 * Override i3 config file
 ```
 cd ~/Documents/i3dots/.i3/
