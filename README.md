@@ -3,7 +3,7 @@
 
 
 
-### Info
+## Info
 
 -  **OS:** Manjaro
 -  **WM:** i3
