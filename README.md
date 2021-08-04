@@ -8,10 +8,10 @@
 -  **OS:** Manjaro
 -  **WM:** i3
 -  **Font:** Noto Sans / Noto Sans Mono
--  **Compositor:** [Picom](https://github.com/yshui/picom)
+-  **Compositor:** Picom
 -  **Bar/Panel:** Polybar
 -  **Text Editor:** Vim
--  **GTK Theme:** [Coffee](https://github.com/danielammartins/KDEdotfiles/tree/main/.themes/Coffee) 
+-  **GTK Theme:** Coffee
 -  **Icons:** Foggy Mountain
 -  **Cursor:** Adwaita
 -  **Application Launcher:** rofi
