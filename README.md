@@ -1,9 +1,6 @@
 <img width="200" src="https://camo.githubusercontent.com/66b25ab542ae255f3782bba56595679faa52c6214ecbec8d38e3403d2e5a3d6b/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f776f726b732d6f6e2d6d792d6d616368696e652e737667" alt="Material Bread logo">
 
-*Installation script should be run as:*
-```
-. install.sh
-```
+
 
 
 ### Info
@@ -21,54 +18,10 @@
 -  **Cursor:** Adwaita
 -  **Application Launcher:** rofi
 
-## Install
+## Installation
 
-* Override i3 config file
+Run the installation script: 
 ```
-cd ~/Documents/i3dots/.i3/
-/bin/cp config ~/.i3/config
+. install.sh
 ```
-* Configure polybar
-```
-cp -r /polybar ~/.config
-```
-* Overwrite the bashrc file in Documents with the bashrc from the dotfiles
-```
-cd ~/Documents/i3dots
-/bin/cp .bashrc ~/
-```
-* Copy the theme folder to the installed themes folder
- ```
- cd ~/Documents/i3dots/.themes
- cp -r Coffee/ /usr/share/themes/
-
- ```
- * Change theme, mouse and icons in lxappearance
-     * Change the GTK theme to Coffee
-     * Change the mouse coursor to Adwaita
-     * Install the Foggy Mountain.tar.gz icon set located in ~/Documents/i3dots/icons
-
-* Set wallpaper
-```
-cd ~/Documents/i3dots/walls
-sudo cp forest_road_winding_151202_3840x2160.jpg /usr/share/backgrounds/ 
-feh --bg-scale /usr/share/backgrounds/forest_road_winding_151202_3840x2160.jpg
-```
-* Set firefox as default browser
-```
-export BROWSER=""			
-xdg-settings set default-web-browser firefox.desktop
-```
-* Copy the .config files 
-```
-cp -r dunst/ rofi/ /spicetify /termite ~/.config
-```
-* Configure Spicetify
-```
-sudo chmod a+wr /opt/spotify
-sudo chmod a+wr /opt/spotify/Apps -R
-spicetify
-spicetify backup apply enable-devtool
-spicetify update
-```
-
+(Very much in testing)
