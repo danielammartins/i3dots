@@ -7,9 +7,7 @@
 
 -  **OS:** Manjaro
 -  **WM:** i3
--  **Terminal:** Termite
--  **Terminal Font:** Noto Sans Mono
--  **System Font:** Noto Sans
+-  **Font:** Noto Sans / Noto Sans Mono
 -  **Compositor:** [Picom](https://github.com/yshui/picom)
 -  **Bar/Panel:** Polybar
 -  **Text Editor:** Vim
