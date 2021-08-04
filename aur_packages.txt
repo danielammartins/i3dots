@@ -1,0 +1,17 @@
+pomotroid-bin
+backlight-control
+figma-linux
+multilockscreen-git
+notion-app
+otf-font-awesome-4
+picom-git
+spicetify-cli
+spotify
+teams-for-linux
+termite
+trello-git
+ttf-font-awesome-4
+visual-studio-code-bin
+wifi-password
+zoom
+otf-san-francisco-pro
