@@ -10,6 +10,8 @@ Run the installation script:
 
 ![Clean](https://github.com/danielammartins/i3dots/blob/main/prints/desktop.png)
 
+![Rofi](https://github.com/danielammartins/i3dots/blob/main/prints/rofi.png)
+
 ![Tilling](https://github.com/danielammartins/i3dots/blob/main/prints/tilling.png)
 
 ![Firefox](https://github.com/danielammartins/i3dots/blob/main/prints/firefox.png)
