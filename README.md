@@ -6,7 +6,7 @@ Run the installation script:
 ```
 . install.sh
 ```
-(Very much in testing)
+(Always in testing)
 
 ![Clean](https://github.com/danielammartins/i3dots/blob/main/prints/desktop.png)
 
