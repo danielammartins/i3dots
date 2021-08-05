@@ -28,3 +28,6 @@ Run the installation script:
 -  **Icons:** Foggy Mountain
 -  **Cursor:** Adwaita
 -  **Application Launcher:** rofi
+
+## Credits
+[ComplexPlatform](https://github.com/ComplexPlatform/KDE-dotfiles), for the icons and the GTK theme
