@@ -116,6 +116,10 @@ function install() {
 	xdg-settings set default-web-browser firefox.desktop
 	echo -e "Firefox is set as default browser!\n"
 
+	# Set Termite as default terminal
+	export TERM=termite
+	echo -e "Termite is set as default terminal!\n"
+
 	# Noto Sans Emoji
 	sudo pacman -S noto-fonts-emoji
 	cd ~/Documents/i3dots/etc/fonts/
@@ -157,11 +161,17 @@ function install() {
 	echo -n "Please make sure to take the following steps in Firefox to ensure the custom theme is applied:"
 	echo -n "	- Navigate to about:config in the address bar and accept the risks;"	
 	echo -n "	- Search for toolkit.legacyUserProfileCustomizations.stylesheets and toggle it to true;"
-	echo -n "	- Open DevTools, go to Settings > Advanced Settings and enable browser chorme, add-on debugging toolboxes and remote debugging."	
-	mkdir ~/.mozilla/firefox/mdy712pv.default-release/chrome/
-	cd ~/Documents/i3dots/firefox/chrome/
-	mv userChrome.css userContent.css ~/.mozilla/firefox/mdy712pv.default-release/chrome/ 
-	echo -n "Firefox CSS is updated!\n"
+	echo -n "	- Open DevTools, go to Settings > Advanced Settings and enable browser chorme, add-on debugging toolboxes and remote debugging;"	
+	# The name of the default-release folder varies, and so the files must be moved manually to prevent erros
+	echo -n "Move the userChrome.css and userContent.css to ~/.mozilla/XXXX.default-release/chrome."	
+	#mkdir ~/.mozilla/firefox/mdy712pv.default-release/chrome/
+	#cd ~/Documents/i3dots/firefox/chrome/
+	#mv userChrome.css userContent.css ~/.mozilla/firefox/mdy712pv.default-release/chrome/ 
+	#echo -n "Firefox CSS is updated!\n"
+
+	# Remove unwanted packages
+	sudo pacman -R $(cat unwanted_packages.txt)
+	echo -n "Removed unwanted packages!\n"
 }
 
 show_menu

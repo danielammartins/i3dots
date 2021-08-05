@@ -1,0 +1,6 @@
+gimp
+epdfview
+mousepad
+xterm
+xfburn
+yay
