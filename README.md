@@ -25,8 +25,6 @@ Run the installation script:
 -  **Bar/Panel:** Polybar
 -  **Text Editor:** Vim
 -  **GTK Theme:** Coffee
--  **Icons:** Foggy Mountain
--  **Cursor:** Adwaita
 -  **Application Launcher:** rofi
 
 ## Credits
