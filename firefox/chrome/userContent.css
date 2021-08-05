@@ -1,0 +1,103 @@
+/*Change scrollbar width*/
+:root{
+	scrollbar-width: 2px !important;
+}
+
+@-moz-document url(about:privatebrowsing) {
+	:root{
+		scrollbar-width: 2px !important;
+	}
+}
+
+/*Home page and new tab*/
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+  
+    body {
+       /* background-image: url("/usr/share/backgrounds/forest_road_winding_151202_3840x2160.jpg");
+        background-position: center;
+        background-repeat: no-repeat;*/
+        background-color: #181818 !important;
+    }
+
+    #newtab-search-text {
+      background-color: #181818 !important;
+      color: white !important;
+      border: none;
+    }
+
+    .contentSearchSuggestionTable {
+    display: none;
+    }
+    
+    .icon-settings {
+        background-color: var(--mff-bg) !important;
+    }
+    
+    #searchSubmit {
+       display: none;  
+    }
+    
+    #newtab-search-text {
+        border:none;
+    }
+
+    .outer-wrapper {
+
+        background-image: url("/usr/share/backgrounds/forest_road_winding_151202_3840x2160_Blur.png") !important;
+
+        background-size: cover !important;
+        
+        background-attachment: fixed !important;
+        
+        color: grey !important; /* Text color */
+        
+    }
+
+    .logo { display: none !important; }
+
+    .wordmark{ 
+        width: 0 !important; 
+    }
+
+    .search-inner-wrapper{
+        width: 50vw !important;
+        top: -7vh !important;
+        opacity: 1 !important;
+        border:none;
+        color: #181818;
+    }
+
+    .activity-stream .search-inner-wrapper {
+        --newtab-search-icon:  !important;
+
+    }
+
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        text-align: center;
+        font: Noto Sans;
+      }
+}
+
+/*Removes blue box shadow from search bar*/
+.search-wrapper input {
+    border-color: #9E7F6D  !important;
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+	box-shadow: none !important;
+}
+
+.search-wrapper:active input {
+    border-color: #9E7F6D  !important;
+	box-shadow: none !important;
+}
+
+.search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
+    border: 1px solid red;
+}
+
+html,body{
+ scrollbar-color: #9E7F6D #181818 !important;
+ scrollbar-width: 2px;
+}
+
